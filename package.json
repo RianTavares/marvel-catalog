@@ -4,6 +4,7 @@
   "description": "Acesse o template do projeto [clicando aqui](https://xd.adobe.com/spec/37b2437b-c18e-4ab5-696d-60903eb2615c-4183/)",
   "main": "server.js",
   "scripts": {
+    "heroku-postbuild": "cd client && npm install && npm run build",
     "client": "cd client && npm start",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",

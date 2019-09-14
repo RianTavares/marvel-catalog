@@ -1,0 +1,27 @@
+{
+  "name": "marvel-catalog",
+  "version": "1.0.0",
+  "description": "Acesse o template do projeto [clicando aqui](https://xd.adobe.com/spec/37b2437b-c18e-4ab5-696d-60903eb2615c-4183/)",
+  "main": "server.js",
+  "scripts": {
+    "client": "cd client && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "concurrently --kill-others-on-fail \"nodemon server.js\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RianTavares/marvel-catalog.git"
+  },
+  "author": "Rian Tavares & Marcio Sardou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RianTavares/marvel-catalog/issues"
+  },
+  "homepage": "https://github.com/RianTavares/marvel-catalog#readme",
+  "dependencies": {
+    "concurrently": "^4.1.2",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.2"
+  }
+}

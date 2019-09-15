@@ -1,38 +1,22 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Body from "./Layout"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Home from './pages/home';
+import Interna from './pages/hq';
 
-class App extends Component {
-  state = {
-    response: ''
-  };
-
-  componentDidMount() {
-    this.callApi()
-      .then(res => this.setState({ response: res.texto }))
-      .catch(err => console.log(err));
-  }
-
-  callApi = async () => {
-    const response = await fetch('/api/v1/teste');
-    const body = await response.json();
-    if (response.status !== 200) throw Error(body.message);
-
-    return body;
-  };
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-            <div>{this.state.response}</div>
-        </header>
-      </div>
-    );
-  }
+function App() {
+  return (
+    <Router>
+      <>
+        <Body>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/about" component={Interna} />
+          </Switch>
+        </Body>
+      </>
+    </Router>
+  );
 }
 
 export default App;

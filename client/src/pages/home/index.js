@@ -26,6 +26,3 @@ const Home = () => {
 }
 
 export default Home;
-
-
-// .map((texto) => {return(<>texto.texto</>)})

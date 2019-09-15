@@ -1,8 +1,8 @@
 import React from "react";
 import Body from "./Layout"
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Home from './pages/home';
-import Interna from './pages/hq';
+import Home from './pages/Home';
+import Interna from './pages/Hq';
 
 function App() {
   return (

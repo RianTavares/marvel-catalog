@@ -1,10 +1,15 @@
 import React from "react";
+import Logo from "../../assets/imgs/logo.png"
 
 const Header = () => {
 
     return(
         <>
-            <h1>MARCIO É MUITO TROXA</h1>
+           <section className="header">
+               <div className="header__logo">
+                   <img src={Logo} alt="Marvel Catalog" />
+                </div>
+           </section>
         </>
     );
 }

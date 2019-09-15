@@ -11,16 +11,16 @@ const Home = () => {
         console.log(data)
     }
 
-    // useEffect(()=>{
-    //     callApi()
-    // }, [])
+    useEffect(()=>{
+        callApi()
+    }, [])
 
     return(
         <>
             <h1>pagina principal</h1>
-            {/* <div>{backMsg.map((txt)=>{
+            <div>{backMsg.map((txt)=>{
                 return(txt.texto)
-            })}</div> */}
+            })}</div>
         </>
     );
 }

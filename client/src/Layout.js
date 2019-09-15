@@ -1,6 +1,6 @@
 import React from "react";
 import { withRouter } from "react-router";
-import Header from './components/sdasdasd';
+import Header from './components/Footer';
 import Footer from './components/Footer';
 import "./App.scss";
 

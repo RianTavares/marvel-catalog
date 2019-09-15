@@ -1,7 +1,7 @@
 import React from "react";
 import { withRouter } from "react-router";
-import Header from './components/Footer';
-import Footer from './components/Footer';
+import Header from './components/Header';
+import Footer from './components/Header';
 import "./App.scss";
 
 const Body = props => {

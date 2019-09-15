@@ -2,25 +2,25 @@ import React, {useState, useEffect} from "react";
 
 const Home = () => {
 
-    const [backMessage, setBackMessage] = useState([]);
+    const [backMsg, setBackMessage] = useState([]);
 
     const callApi = async () => {
         const request = await fetch('api/v1/teste');
         const data = await request.json();
-        console.log(data);
-        setBackMessage(data);
-        
+        setBackMessage([data]);
+        console.log(data)
     }
 
-    useEffect(() => {
-        callApi();
-    })
-
+    useEffect(()=>{
+        callApi()
+    }, [])
 
     return(
         <>
             <h1>pagina principal</h1>
-            <div>{backMessage}</div>
+            <div>{backMsg.map((txt)=>{
+                return(txt.texto)
+            })}</div>
         </>
     );
 }

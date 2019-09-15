@@ -1,0 +1,19 @@
+.header {
+    background-color: $BACKGROUND_COLOR;
+    position: absolute;
+    width: 100vw;
+    left: 0;
+    top: 0;
+    
+
+    &__logo {
+        display: flex;
+        justify-content: center;
+
+        img {
+            padding: 25px 0 95px 0;
+            width: 262px;
+            height: 90px;
+        }
+    }
+}

@@ -1,11 +1,23 @@
 import React from "react";
+import Logo from "../../assets/imgs/logo.png"
 
 const Footer = () => {
 
     return(
         <>
-            <h1>EU SOU UM footer</h1>
-            <p>...e o marcio continua otário</p>
+            <footer className="footer">
+
+                <div className="footer__img">
+                    <img src={Logo} alt="img footer"></img>
+                </div>
+                
+                <div className="footer__text">
+                    <p>
+                        Developed by Rian Tavares and MarcioSardou
+                    </p>
+                </div>
+            </footer>
+
         </>
     );
 }

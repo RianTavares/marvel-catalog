@@ -1,0 +1,41 @@
+
+.footer {
+    background-color: $BACKGROUND-COLOR;
+    position: fixed;
+    left: 0;
+    top:30em;
+    height: 100px;
+    width: 100%;
+
+    
+    &__img {
+        display: flex;
+        justify-content: center;
+    
+        img {
+            width: 118px;
+            height: 37px;
+            margin-top: 0.4em;
+        }
+    }
+
+    &__text {
+        width:305px;
+        height: 25px;
+        margin-top: 26px;
+
+
+            p{
+                top: 1664px;
+                left: 35px;
+                width: 305px;
+                height: 24px;
+                text-align: center;
+                font-family: Roboto Ligth;
+                font-size: 16px;
+                letter-spacing: 0;
+                color: #FFFFFF;
+                opacity: 1;  
+            }
+    }
+}

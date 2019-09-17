@@ -1,11 +1,12 @@
 
 .footer {
     background-color: $BACKGROUND-COLOR;
-    position: fixed;
+    position: absolute;
+    height: 120px;
+    width: 100vw;
+    border-top: 1px solid #FFFFFF;
     left: 0;
-    top:30em;
-    height: 100px;
-    width: 100%;
+    bottom: 0;
 
     
     &__img {
@@ -13,29 +14,28 @@
         justify-content: center;
     
         img {
-            width: 118px;
-            height: 37px;
-            margin-top: 0.4em;
+            position: absolute;
+            top: -23px;
+            width: 120px;
+            height: 35px;
+            background-color: #282828;
+            padding: 5px;
         }
     }
 
     &__text {
-        width:305px;
-        height: 25px;
-        margin-top: 26px;
+        display: flex;
+        justify-content: center;
 
 
             p{
-                top: 1664px;
-                left: 35px;
-                width: 305px;
-                height: 24px;
+                position: absolute;
+                bottom: 0;
                 text-align: center;
                 font-family: Roboto Ligth;
                 font-size: 16px;
-                letter-spacing: 0;
                 color: #FFFFFF;
-                opacity: 1;  
+
             }
     }
 }

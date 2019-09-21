@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from "react";
+import Search from "./../../components/Search";
 
 const Home = () => {
 
@@ -17,6 +18,7 @@ const Home = () => {
 
     return(
         <>
+            <Search />           
             <h1>pagina principal</h1>
             <div>{backMsg.map((txt)=>{
                 return(txt.texto)

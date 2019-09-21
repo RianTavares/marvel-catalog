@@ -1,0 +1,15 @@
+.form {
+
+    display: flex;
+    justify-content: center;
+
+
+        &__inp{
+            width: 90vw;
+            height: 10vh;
+            position: absolute;
+            top: 170px;
+            border-radius: 15px;
+            border: 1px solid #707070; 
+        }
+}

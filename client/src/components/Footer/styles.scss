@@ -1,19 +1,41 @@
-.header {
-    background-color: $BACKGROUND_COLOR;
-    position: absolute;
-    width: 100vw;
-    left: 0;
-    top: 0;
-    
 
-    &__logo {
+.footer {
+    background-color: $BACKGROUND-COLOR;
+    position: relative;
+    height: 120px;
+    width: 100vw;
+    border-top: 1px solid #FFFFFF;
+    left: 0;
+    bottom: 0;
+
+    
+    &__img {
+        display: flex;
+        justify-content: center;
+    
+        img {
+            position: absolute;
+            top: -23px;
+            width: 120px;
+            height: 35px;
+            background-color: $BACKGROUND-COLOR;
+            padding: 5px;
+        }
+    }
+
+    &__text {
         display: flex;
         justify-content: center;
 
-        img {
-            padding: 25px 0 95px 0;
-            width: 262px;
-            height: 90px;
-        }
+
+            p{
+                position: absolute;
+                bottom: 0;
+                text-align: center;
+                font-family: Roboto Ligth;
+                font-size: 16px;
+                color: #FFFFFF;
+
+            }
     }
 }

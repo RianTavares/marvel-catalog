@@ -4,7 +4,7 @@ const Hq = () => {
 
     return(
         <>
-            <h1>pagina interna</h1>
+                <h1>VIngadores UltiMARCIO</h1>
         </>
     );
 }

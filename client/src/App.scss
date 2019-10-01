@@ -1,7 +1,11 @@
 // general vars and scss confs 
+@import './fonts';
 @import './conf';
 @import './main.scss';
 
 // components 
 
 @import './components/Header/styles.scss';
+@import './components/Footer/styles.scss';
+@import './components/Search/styles.scss';
+@import './components/ItemHQ/styles.scss';

@@ -1,19 +1,27 @@
 import React from "react";
 import Logo from "../../assets/imgs/logo.png"
 
-const Header = () => {
+const Footer = () => {
 
     return(
         <>
-           <section className="header">
-               <div className="header__logo">
-                   <img src={Logo} alt="Marvel Catalog" />
+            <footer className="footer">
+
+                <div className="footer__img">
+                    <img src={Logo} alt="img footer"></img>
                 </div>
-           </section>
+                
+                <div className="footer__text">
+                    <p>
+                        Developed by Rian Tavares and MarcioSardou
+                    </p>
+                </div>
+            </footer>
+
         </>
     );
 }
 
-export default Header;
+export default Footer;
 
 

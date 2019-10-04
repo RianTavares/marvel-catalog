@@ -22,8 +22,16 @@
             height: 50%;
             background-image: url('../../assets/imgs/test.jpg');
             background-size: contain;
-            background-repeat: no-repeat;
+            background-repeat: no-repeat;            
+        }
 
-            
+        &__texts {
+            font-family: 'Roboto Condensed Light';
+            color: #ffffff;
+        }
+
+        &__author {
+            font-family: 'Roboto Condensed Bold';
+            color: #ffffff;
         }
 }

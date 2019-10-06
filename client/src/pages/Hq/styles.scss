@@ -1,0 +1,21 @@
+.hq-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__title {
+        text-align: center;
+        text-transform: uppercase;
+    }
+
+    &__img {
+        width: 150px;
+        height: 235px;
+        background-image: url('http://i.annihil.us/u/prod/marvel/i/mg/9/d0/58b5cfb6d5239.jpg');
+        background-size: contain;
+        background-repeat: no-repeat;       
+    }
+
+    &__author {
+        font-family: 'Roboto Condensed Bold' !important;
+    }
+}

@@ -12,4 +12,17 @@ body {
         width: calc(100% - 20px);
         margin: 0 auto;
     }
+
+    p {
+        font-family: 'Roboto Condensed Light';
+        font-size: 18px;
+        color: white;
+        text-align: justify;
+    }
+
+    h1 {
+        font-family: 'Roboto Condensed Bold';
+        color: white;
+        font-size: 25px;
+    }
 }

@@ -1,6 +1,8 @@
 const api = require('express').Router();
 const comics =  require('./mocks/comics/comics-mock.json');
 const axios = require('axios');
+const dotenv = require('dotenv');
+dotenv.config();
 
 module.exports = () => {
     
@@ -25,10 +27,12 @@ module.exports = () => {
             
         //     comicsArray.push(obj)
         // });
+        const BASE_URL = 'http://gateway.marvel.com/v1/public/comics?'
+        const TIME_STAMP = 'ts=' + Date.now();
+        const API_KEY = '&apikey=' + process.env.API_KEY;
+        const HASH = '&hash=' + process.env.PRIVATE_KEY;
 
-
-
-        axios.get('')
+        axios.get(BASE_URL+TIME_STAMP+API_KEY+HASH)
         .then(response => {
             console.log(response);
             // console.log(response.data.explanation);

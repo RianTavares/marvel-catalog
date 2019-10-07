@@ -1,5 +1,6 @@
 const api = require('express').Router();
 const comics =  require('./mocks/comics/comics-mock.json');
+const axios = require('axios');
 
 module.exports = () => {
     
@@ -10,22 +11,34 @@ module.exports = () => {
 
     api.get('/comics', (req, res) => {
 
-        let comicsArray = [];
+        // let comicsArray = [];
 
-        comics.data.results.forEach(element => {
-            let title = element.title;
-            title = title.slice(0, 11)
-            title = title + '...';
+        // comics.data.results.forEach(element => {
+        //     let title = element.title;
+        //     title = title.slice(0, 11)
+        //     title = title + '...';
 
-            const obj = {
-                'title': title,
-                'thumb': element.thumbnail.path + '.' + element.thumbnail.extension
-            }
+        //     const obj = {
+        //         'title': title,
+        //         'thumb': element.thumbnail.path + '.' + element.thumbnail.extension
+        //     }
             
-            comicsArray.push(obj)
+        //     comicsArray.push(obj)
+        // });
+
+
+
+        axios.get('')
+        .then(response => {
+            console.log(response);
+            // console.log(response.data.explanation);
+        })
+        .catch(error => {
+            console.log(error);
         });
 
-        res.json(comicsArray);
+
+        res.json('lalalalalala');
         
     })
 

@@ -8,10 +8,24 @@ dotenv.config();
 module.exports = () => {
     
     api.get('/teste', (req, res) => {
-        res.json({'texto':'Marcio Otario'});
-        
-    })
+        const response = []
+        // let count = 0
+        comics.data.results.map((item) => {
+            const obj = {
+                "id": item.id,
+                "title": item.title,
+                "thumb": item.thumbnail.path + "." + item.thumbnail.extension 
+            }
+            response.push(obj)
+            // console.log(count+=1);
+              
+        })
 
+
+
+        res.json({'texto':'Marcio Otario'});
+    })
+    
     api.get('/comics', (req, res) => {
     
         const BASE_URL = 'http://gateway.marvel.com/v1/public/comics?';

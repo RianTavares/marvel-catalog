@@ -13,38 +13,42 @@ module.exports = () => {
     })
 
     api.get('/comics', (req, res) => {
-
+    
         const BASE_URL = 'http://gateway.marvel.com/v1/public/comics?';
-        const limit = 'limit=0';
+        const limit = 'limit=10';
         const TIME_STAMP = Date.now();
         const API_KEY = process.env.API_KEY;
-        const PRIVATE_KEY = process.env.PRIVATE_KEY
-        const HASH =  + md5(TIME_STAMP+API_KEY+PRIVATE_KEY);
+        const PRIVATE_KEY = process.env.PRIVATE_KEY;
+        const mixin = TIME_STAMP + PRIVATE_KEY + API_KEY;
+        const HASH = md5(mixin);
         let comicsArray = [];
 
-        // '&ts=' '&apikey='  '&hash='
         axios.get(BASE_URL+limit+'&ts='+TIME_STAMP+'&apikey='+API_KEY+'&hash='+HASH)
         .then(response => {
 
-            response.forEach(element => {
-                    let title = element.title;
-                    title = title.slice(0, 11)
-                    title = title + '...';
+            const results = response.data.data.results;
+
+            results.forEach(element => {
+                
+                let title = element.title;
+                title = title.slice(0, 11)
+                title = title + '...';
         
-                    const obj = {
-                        'title': title,
-                        'thumb': element.thumbnail.path + '.' + element.thumbnail.extension
-                    }
+                const obj = {
+                    'title': title,
+                    'thumb': element.thumbnail.path + '.' + element.thumbnail.extension,
+                    'id': element.id
+                }
                     
-                    comicsArray.push(obj)
-                });
+                comicsArray.push(obj)
+            });
+            
+            res.json(comicsArray);
 
         })
         .catch(error => {
             console.log(error);
         });
-
-        res.json(comicsArray);
         
     })
 

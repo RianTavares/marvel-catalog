@@ -9,7 +9,7 @@ const Home = () => {
     const callApi = async () => {
         const request = await fetch('api/v1/teste');
         const data = await request.json();
-        setBackMessage([data]);
+        setBackMessage(data);
         console.log(data)
     }
 
@@ -23,7 +23,7 @@ const Home = () => {
             <h1>pagina principal</h1>
             <Item />
             <div>{backMsg.map((txt)=>{
-                return(txt.texto)
+                return(txt.thumb)
             })}</div>
         </>
     );

@@ -10,6 +10,7 @@ module.exports = () => {
     api.get('/teste', (req, res) => {
         const response = []
         // let count = 0
+
         comics.data.results.map((item) => {
             const obj = {
                 "id": item.id,
@@ -23,7 +24,7 @@ module.exports = () => {
 
 
 
-        res.json({'texto':'Marcio Otario'});
+        res.json(response);
     })
     
     api.get('/comics', (req, res) => {

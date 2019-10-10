@@ -3,30 +3,37 @@ import Search from "./../../components/Search";
 import Item from "../../components/ItemHQ";
 
 const Home = () => {
-
-    const [backMsg, setBackMessage] = useState([]);
-
+    
+    const [ backMsg, setBackMsg ] = useState([]);
+    
     const callApi = async () => {
-        const request = await fetch('api/v1/teste');
-        const data = await request.json();
-        setBackMessage([data]);
-        console.log(data)
+        
+        const request = await fetch('api/v1/comics');
+        const data = await request.json();  
+        setBackMsg(data);
+        console.log(data);
     }
-
-    useEffect(()=>{
+    
+    useEffect (() => {
         callApi()
     }, [])
-
-    return(
-        <>
+    
+    return (
+        <div>
             <Search />           
-            <h1>pagina principal</h1>
-            <Item />
-            <div>{backMsg.map((txt)=>{
-                return(txt.texto)
-            })}</div>
-        </>
-    );
+            <div className="hq-list">
+                {backMsg.map((response) => {     
+                    return(
+                        <Item 
+                            title={response.title}
+                            thumb={response.thumb}
+                            key={response.id}
+                        />
+                    )
+                })}
+            </div>
+        </div>
+    )
 }
-
-export default Home;
+        export default Home;
+        

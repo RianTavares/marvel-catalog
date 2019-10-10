@@ -3,14 +3,18 @@ body {
 }
 .page-content {
     padding-top: 200px;
-    width: 100vw;
-    height: 100vh;
+    min-height: 100vh;
     padding-bottom: 100px;
     background-color: $BACKGROUND_COLOR;
 
     &__body {
-        width: calc(100% - 20px);
+        max-width: 600px;
+        width: calc(100% - 50px);
         margin: 0 auto;
+
+        @media #{$BREAKPOINT-TABLET-LAND} {
+            max-width: 740px;
+        }
     }
 
     p {

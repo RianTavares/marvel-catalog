@@ -23,11 +23,7 @@
   "dependencies": {
     "axios": "^0.19.0",
     "concurrently": "^4.1.2",
-<<<<<<< HEAD
     "dotenv": "^8.1.0",
-=======
-    "eslint-utils": "^1.4.2",
->>>>>>> fix/vulnerability
     "express": "^4.17.1",
     "md5": "^2.2.1",
     "nodemon": "^1.19.2"

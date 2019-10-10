@@ -1,5 +1,12 @@
 .page-content {
     &__body {
         
+        .hq-list {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-top: 100px;
+        }
     }
+
 }

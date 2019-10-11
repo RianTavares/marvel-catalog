@@ -1,7 +1,9 @@
 import React from "react";
+import { useParams} from "react-router-dom";
 
-//esquema de props?
 const Hq = () => {
+    
+    let { id } = useParams();
     
     return(
         <>

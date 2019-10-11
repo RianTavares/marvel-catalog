@@ -27,6 +27,7 @@ const Home = () => {
                         <Item 
                             title={response.title}
                             thumb={response.thumb}
+                            id={response.id}
                             key={response.id}
                         />
                     )

@@ -64,7 +64,6 @@ module.exports = () => {
     api.get('/details', (req, res) => {
 
         const comicId = comics.data.results[0].id;
-        console.log(comicId);
 
         const BASE_URL = 'http://gateway.marvel.com/v1/public/comics/';
         const TIME_STAMP = Date.now();

@@ -6,7 +6,7 @@ const Item = (props) => {
         backgroundImage: `url(${props.thumb})`
     }
 
-    const comicUrl = `/about/${props.id}`
+    const comicUrl = `${props.id}`
 
     return(
         <>  

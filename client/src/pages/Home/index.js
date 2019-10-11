@@ -11,7 +11,6 @@ const Home = () => {
         const request = await fetch('api/v1/comics');
         const data = await request.json();  
         setBackMsg(data);
-        console.log(data);
     }
     
     useEffect (() => {

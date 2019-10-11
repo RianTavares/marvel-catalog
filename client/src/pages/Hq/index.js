@@ -1,22 +1,33 @@
-import React from "react";
-import { useParams} from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 
 const Hq = () => {
+
+    const [ backMsg, setBackMsg ] = useState([]);
+
+    const comicDetailsApi = async () => {
+        const request = await fetch('api/v1/details');
+        const response = await request.json();
+        setBackMsg(response[0]);
+    }
+    useEffect (() => {
+        comicDetailsApi(); 
+    },[])
     
     let { id } = useParams();
     
+    const imageHq = {
+        backgroundImage: `url(${ backMsg.thumb })`
+    }
+
     return(
         <>
             <section className="hq-details">
-                <h1 className="hq-details__title">Vingadores - Guerra Infinita</h1>
+                <h1 className="hq-details__title">{ backMsg.title }</h1>
 
-                <div className="hq-details__img"></div>
+                <div className="hq-details__img" style={ imageHq }></div>
                 
-                <p className="hq-details__description">
-                    Mussum ipsum cacilds, vidis litro abertis. Consetis adipiscings elitis. Pra lá , depois divoltis porris, paradis. Paisis, filhis, espiritis santis. Mé faiz elementum girarzis, nisi eros vermeio, in elementis mé pra quem é amistosis quis leo. Manduma pindureta quium dia nois paga. Sapien in monti palavris qui num significa nadis i pareci latim. Interessantiss quisso pudia ce receita de bolis, mais bolis eu num gostis.
-                </p>
-
-                <p className="hq-details__author">Author: MARCIO</p>
+                <p className="hq-details__description">{backMsg.description}</p>
             </section>
         </>
     );

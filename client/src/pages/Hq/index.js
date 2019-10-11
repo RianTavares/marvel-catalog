@@ -6,13 +6,20 @@ const Hq = () => {
     const [ backMsg, setBackMsg ] = useState([]);
 
     const comicDetailsApi = async () => {
-        const request = await fetch('api/v1/details');
+        const request = await fetch('api/v1/details', {
+            method: 'POST',
+            headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({id:id})
+        });
         const response = await request.json();
         setBackMsg(response[0]);
     }
     useEffect (() => {
         comicDetailsApi(); 
-    },[])
+    }, [setBackMsg])
     
     let { id } = useParams();
     

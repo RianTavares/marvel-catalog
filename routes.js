@@ -61,9 +61,9 @@ module.exports = () => {
         .catch((err) => console.log(`O erro é:${err}`));
     })
 
-    api.get('/details', (req, res) => {
+    api.post('/details', (req, res) => {
 
-        const comicId = comics.data.results[0].id;
+        const comicId = req.body.id;
 
         const BASE_URL = 'http://gateway.marvel.com/v1/public/comics/';
         const TIME_STAMP = Date.now();

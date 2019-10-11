@@ -11,12 +11,28 @@ const Home = () => {
         const request = await fetch('api/v1/comics');
         const data = await request.json();  
         setBackMsg(data);
+
+        sessionStorage.setItem('hqs_items', JSON.stringify(data));
     }
     
     useEffect (() => {
-        callApi()
+
+        const sessionStorageVar = sessionStorage.getItem('hqs_items') ? sessionStorage.getItem('hqs_items') : null;
+
+        if(sessionStorageVar == null) {
+            console.log('hq ta vazia');
+            
+            callApi();
+        } else {
+            console.log('já tenho HQ po');
+            setBackMsg(JSON.parse(sessionStorageVar));
+            
+        }
+
+
+
     }, [])
-    
+
     return (
         <div>
             <Search />           

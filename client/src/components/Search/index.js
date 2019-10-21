@@ -6,8 +6,7 @@ const Search = () => {
     return(
         <>
             <form className="form">
-
-                    <input type="search" placeholder="search" className="form__inp"></input>
+                <input type="search" placeholder="Search" className="form__inp"></input>
             </form>
 
         </>

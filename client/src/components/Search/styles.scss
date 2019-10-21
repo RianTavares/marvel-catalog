@@ -4,11 +4,13 @@
     justify-content: center;
 
 
-        &__inp{
+        &__inp {
             width: 100%;
             height: 50px;
             position: relative;
             border-radius: 15px;
-            border: 1px solid #707070; 
+            border: 1px solid #707070;
+            padding: 15px;
+            font-size: 14px;
         }
 }

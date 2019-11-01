@@ -5,30 +5,30 @@ const Home = () => {
     
     const [backMsg, setBackMsg] = useState([]);
     const [search, setSearch] = useState('');
-    const [test, setTest] = useState([]);
+    const [filteredData, seFfilteredData] = useState([]);
     
     const callApi = async () => {
         const request = await fetch('api/v1/comics');
-        const data = await request.json();  
+        const data = await request.json(); console.log(data)  
         setBackMsg(data);
-        setTest(data);
+        seFfilteredData(data);
         
         sessionStorage.setItem('hqs_items', JSON.stringify(data));
     }
     
     const updateSearch = (event) => {
-        setSearch(event.target.value.substr(0, 20));
-
-        setTest(backMsg.filter(
-            (item) => {
-                return item.title.toLowerCase().indexOf(search) !== -1;
-            }
-        ));
-
-        console.log('search: ', search);
-        console.log('data: ', test);
+        const str = event.target.value.substr(0, 20)
         
+        setSearch(str)
         
+        seFfilteredData(
+            backMsg.filter(
+                (item) => { 
+                    return item.title.toLowerCase().includes(str);
+                }
+            ) 
+        )
+
     }
 
 
@@ -40,7 +40,7 @@ const Home = () => {
             callApi();
         } else {
             setBackMsg(JSON.parse(sessionStorageVar));
-            setTest(JSON.parse(sessionStorageVar));
+            seFfilteredData(JSON.parse(sessionStorageVar));
             
             
         }
@@ -56,7 +56,7 @@ const Home = () => {
             />
 
             <div className="hq-list">
-                {test.map((response) => {     
+                {filteredData.map((response) => {     
                     return(
                         <Item 
                             title={response.title}

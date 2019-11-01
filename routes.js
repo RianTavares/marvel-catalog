@@ -6,26 +6,6 @@ const dotenv = require('dotenv');
 dotenv.config();
 
 module.exports = () => {
-    
-    api.get('/teste', (req, res) => {
-        
-        const response = [];
-        
-        comics.data.results.map((item) => {
-            
-            let title = item.title;
-            title = title.slice(0,11);
-            title = title + '...';
-            
-            const obj = {
-                "id": item.id,
-                "title": title,
-                "thumb": item.thumbnail.path + "." + item.thumbnail.extension 
-            }
-            response.push(obj);
-        })
-        res.json(response);
-    })
 
     api.get('/comics', (req, res) => {
         
@@ -52,6 +32,7 @@ module.exports = () => {
                 const obj = {
                     'id':hq.id,
                     'title': title,
+                    'name': hq.title,
                     'thumb': hq.thumbnail.path + "." + hq.thumbnail.extension
                 }
                 comicsArray.push(obj);

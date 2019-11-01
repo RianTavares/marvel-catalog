@@ -20,14 +20,14 @@ const Home = () => {
     }
     
     const updateSearch = (event) => {
-        const str = event.target.value.substr(0, 20)
+        const str = event.target.value.substr(0, 20).toLowerCase()
         
         setSearch(str)
         
         seFfilteredData(
             backMsg.filter(
                 (item) => { 
-                    return item.title.toLowerCase().includes(str);
+                    return item.name.toLowerCase().includes(str);
                 }
             ) 
         )

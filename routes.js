@@ -7,17 +7,17 @@ dotenv.config();
 
 module.exports = () => {
 
-    api.get('/comics', (req, res) => {
+    api.post('/comics', (req, res) => {
         
         const BASE_URL = 'http://gateway.marvel.com/v1/public/comics?';
-        const limit = 'limit=12';
+        const limit = `limit=${req.body.limit}`;
         const TIME_STAMP = Date.now();
         const API_KEY = process.env.API_KEY;
         const PRIVATE_KEY = process.env.PRIVATE_KEY;
         const mixin = TIME_STAMP + PRIVATE_KEY + API_KEY;
         const HASH = md5(mixin);
         let comicsArray = [];
-        
+
         axios.get(`${BASE_URL}${limit}&ts=${TIME_STAMP}&apikey=${API_KEY}&hash=${HASH}`)
         .then(response => {
 

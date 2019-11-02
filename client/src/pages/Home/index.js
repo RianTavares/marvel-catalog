@@ -7,14 +7,28 @@ const Home = () => {
     const [backMsg, setBackMsg] = useState([]);
     const [search, setSearch] = useState('');
     const [filteredData, seFfilteredData] = useState([]);
-    const [ loading, setLoading ] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const [requestLimit, setRequestLimit] = useState(12);
     
+
     const callApi = async () => {
+        const buttonMore = document.getElementById("teste");
+        buttonMore.classList.add('lds-ring');
         setLoading(true);
-        const request = await fetch('api/v1/comics');
+        setRequestLimit(requestLimit+12)
+        
+        const request = await fetch('api/v1/comics', {
+            method: 'POST',
+            body: JSON.stringify({limit: requestLimit}),
+            headers: {
+                'Content-Type': 'application/json'
+              }
+          });
+
         const data = await request.json(); console.log(data)  
         setBackMsg(data);
         seFfilteredData(data);
+        buttonMore.classList.remove('lds-ring');
         await setLoading(false);
         sessionStorage.setItem('hqs_items', JSON.stringify(data));
     }
@@ -34,7 +48,6 @@ const Home = () => {
 
     }
 
-
     useEffect (() => {
 
         const sessionStorageVar = sessionStorage.getItem('hqs_items') ? sessionStorage.getItem('hqs_items') : null;
@@ -47,6 +60,7 @@ const Home = () => {
             
             
         }
+
     }, [])
 
     return (
@@ -72,9 +86,13 @@ const Home = () => {
                     )
                 })}
             </div>
+            
+            <button id="teste" className="more" onClick={callApi}>More<div></div><div></div><div></div><div></div></button>
+
         </div>
     </>
     )
 }
-        export default Home;
+
+export default Home;
         

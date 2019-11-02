@@ -12,7 +12,7 @@ const Item = (props) => {
         <>  
             <section className="item">
                 <h1 className="item__title">{props.title}</h1>
-                <Link to={comicUrl}><button>Learn More</button></Link>
+                <Link to={comicUrl}><button>See More</button></Link>
                 <div className="item__gradient"></div>
                 <div className="item__image" style={img}></div>
             </section>

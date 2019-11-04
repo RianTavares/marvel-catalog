@@ -13,7 +13,10 @@ const Footer = () => {
                 
                 <div className="footer__text">
                     <p>
-                        Developed by Rian Tavares and MarcioSardou
+                        Developed by 
+                        <a href="https://riantavares.github.io/" target="_blank" rel="noopener noreferrer"> Rian Tavares </a> 
+                        and 
+                        <a href="https://www.linkedin.com/in/marcio-sardou-262b84149/" target="_blank" rel="noopener noreferrer"> Marcio Sardou </a>
                     </p>
                 </div>
             </footer>

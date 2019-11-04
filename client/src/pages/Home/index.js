@@ -22,7 +22,7 @@ const Home = () => {
               }
           });
 
-        const data = await request.json(); console.log(data)  
+        const data = await request.json();
         setBackMsg(data);
         seFfilteredData(data);
         buttonMore.classList.remove('lds-ring');

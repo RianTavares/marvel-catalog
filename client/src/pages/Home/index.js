@@ -1,20 +1,17 @@
 import React, {useState, useEffect} from "react";
 import Item from "../../components/ItemHQ";
-import Loading from "../../components/Loading";
 
 const Home = () => {
     
     const [backMsg, setBackMsg] = useState([]);
     const [search, setSearch] = useState('');
     const [filteredData, seFfilteredData] = useState([]);
-    const [loading, setLoading] = useState(false);
     const [requestLimit, setRequestLimit] = useState(12);
     
 
     const callApi = async () => {
         const buttonMore = document.getElementById("teste");
         buttonMore.classList.add('lds-ring');
-        setLoading(true);
         setRequestLimit(requestLimit+12)
         
         const request = await fetch('api/v1/comics', {
@@ -29,7 +26,6 @@ const Home = () => {
         setBackMsg(data);
         seFfilteredData(data);
         buttonMore.classList.remove('lds-ring');
-        await setLoading(false);
         sessionStorage.setItem('hqs_items', JSON.stringify(data));
     }
     
@@ -72,7 +68,6 @@ const Home = () => {
                 value={search}
             />
 
-            {loading ? <Loading /> : ''}         
       
             <div className="hq-list">
                 {filteredData.map((response) => {     

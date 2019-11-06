@@ -1,4 +1,5 @@
-<p align="center"><a href="https://github.com/RianTavares/node-crawler" alt="AutoEsporteBot Logo"><img src="./client/src/assets/imgs/logo.png"></a></p>
+<body style="background-color: #282828">
+<p style="background-color: #282828" align="center"><a href="https://github.com/RianTavares/marvel-catalog" alt="Marvel Catalog"><img src="./client/src/assets/imgs/logo.png"></a></p>
 
 # About this project
 We built this application to improve ourselves as ReactJs Developers. In this project we used also NodeJs as backend. We worked with the concept of Hooks into React and also Blocks, Elements and Modifiers (BEM) with Sass to improve the application design.
@@ -48,3 +49,4 @@ PRIVATE_KEY=YourApiPrivateKeyValueHere
 ## Template
 
 - [click here](https://xd.adobe.com/spec/37b2437b-c18e-4ab5-696d-60903eb2615c-4183/)  
+</body>

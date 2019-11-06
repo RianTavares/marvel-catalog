@@ -1,10 +1,15 @@
 # Marvel-Catalog
+We built this application to improve ourselves as ReactJs Developers. In this project we used also NodeJs as backend. We worked with the concept of Hooks into React and also Blocks, Elements and Modifiers (BEM) with Sass to improve the application design.
 
--blablbalbalbablablabl
+As part of the challenge we decided to accomplish some goals as:  
 
-## Getting Started
-
--lblalbalba
+#### Features
+- [✓] Get and show Comics from Marvel API 
+- [✓] Pagination 
+- [✓] Search of Comics Title
+- [✓] Loading
+- [✓] Show Comics details when it's clicked
+- [✓] Responsive Template
 
 ## Prerequisites
 
@@ -12,13 +17,9 @@
 
 ``` example ```
 
-## Installing 
+## Getting Started
 
--blablabla
-
-``` example ```
-
-``` example ```
+-lblalbalba
 
 ## Authors
 

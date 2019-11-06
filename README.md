@@ -1,4 +1,3 @@
-<body style="background-color: #282828">
 <p style="background-color: #282828" align="center"><a href="https://github.com/RianTavares/marvel-catalog" alt="Marvel Catalog"><img src="./client/src/assets/imgs/logo.png"></a></p>
 
 # About this project
@@ -49,4 +48,3 @@ PRIVATE_KEY=YourApiPrivateKeyValueHere
 ## Template
 
 - [click here](https://xd.adobe.com/spec/37b2437b-c18e-4ab5-696d-60903eb2615c-4183/)  
-</body>

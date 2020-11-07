@@ -1,4 +1,5 @@
-<p style="background-color: #282828" align="center"><a href="https://github.com/RianTavares/marvel-catalog" alt="Marvel Catalog"><img src="./client/src/assets/imgs/logo.png"></a></p>
+<p align="center"><a href="https://marvel-catolog.herokuapp.com/" alt="Marvel Catalog"><img src="./client/src/assets/imgs/logo-bw.png"></a></p>
+
 
 # About this project
 We built this application to improve ourselves as ReactJs Developers. In this project we used also NodeJs as backend. We worked with the concept of Hooks into React and also Blocks, Elements and Modifiers (BEM) with Sass to improve the application design.
@@ -38,6 +39,10 @@ PRIVATE_KEY=YourApiPrivateKeyValueHere
 - Then Run npm install into the client path ```marvel-catalog/client``` 
 - At the project root ```marvel-catalog``` start the app for development via command line ```npm run dev``` 
 - The back now is running on 5000 port and the front on 3000. The web browser will open with the project automatically. Have fun! 
+
+## Live
+
+With the purpose to show what was built, we deployed the application at Heroku and you can access by clicking here: [https://marvel-catolog.herokuapp.com/](https://marvel-catolog.herokuapp.com/)
 
 
 ## Authors
